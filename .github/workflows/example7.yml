@@ -1,0 +1,13 @@
+##push trigger
+
+name: Example7
+on: [push]
+jobs:
+  test1:
+    runs-on: self-hosted
+    steps:
+      - name: Failing step
+        id: demo
+        run: exit 1
+      - name: The demo step has failed
+        if: ${{ failure() && steps.demo.conclusion == 'failure' }}
