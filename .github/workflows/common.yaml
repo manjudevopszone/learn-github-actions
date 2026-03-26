@@ -1,0 +1,7 @@
+name: common workflows
+on: [push]
+jobs:
+  test1:
+    runs-on: self-hosted
+    steps:
+      - run: echo Common jobs

@@ -1,0 +1,8 @@
+##push trigger
+## calling common workflow
+name: GitHub Actions push trigger example
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  call-common:
+    uses: common.yaml@main
