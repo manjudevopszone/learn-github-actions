@@ -11,4 +11,4 @@ jobs:
         run: exit 1
       - name: The demo step has failed
         if: ${{ failure() && steps.demo.conclusion == 'failure' }}
-        run: echo "demo step has failed"
+        run: echo "demo step has failed"  >> $GITHUB_STEP_SUMMARY
