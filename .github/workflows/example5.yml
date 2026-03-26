@@ -6,4 +6,6 @@ jobs:
   test1:
     runs-on: self-hosted
     steps:
-      - run: exit 1
+      - run: |
+          echo "::Intentional error ::Missing semicolon"
+          exit 1
