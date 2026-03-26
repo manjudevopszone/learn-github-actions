@@ -1,7 +1,6 @@
 ##push trigger
 ## calling common workflow
 name: Example4
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   call-common:
