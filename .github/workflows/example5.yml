@@ -1,0 +1,9 @@
+##push trigger
+
+name: Example5
+on: [push]
+jobs:
+  test1:
+    runs-on: self-hosted
+    steps:
+      - run: exit 1
