@@ -1,0 +1,16 @@
+## sequential jobs
+name: Example3
+on: [push]
+jobs:
+  Test1:
+    runs-on: self-hosted
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
+  Test2:
+    runs-on: self-hosted
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
+  Test3:
+    runs-on: self-hosted
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
