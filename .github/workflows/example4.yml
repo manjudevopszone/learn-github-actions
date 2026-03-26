@@ -4,4 +4,4 @@ name: Example4
 on: [push]
 jobs:
   call-common:
-    uses: .github/workflowscommon.yaml@main
+    uses: .github/workflows/common.yaml@main
