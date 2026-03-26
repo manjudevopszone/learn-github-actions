@@ -1,5 +1,5 @@
 name: common workflows
-on: [push]
+on: [workflow_call]
 jobs:
   test1:
     runs-on: self-hosted
