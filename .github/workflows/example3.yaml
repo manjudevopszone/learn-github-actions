@@ -8,9 +8,11 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
   Test2:
     runs-on: self-hosted
+    needs: Test1
     steps:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
   Test3:
     runs-on: self-hosted
+    needs: ["Test1", "Test2"]
     steps:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by AWS!"
