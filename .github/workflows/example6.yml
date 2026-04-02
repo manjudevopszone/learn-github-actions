@@ -1,0 +1,12 @@
+##push trigger
+name: Example5
+on: [push]
+jobs:
+  example_matrix:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - run: echo this job runs automatically
