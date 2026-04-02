@@ -1,5 +1,5 @@
 ##push trigger
-name: Example5
+name: Example6
 on: [push]
 jobs:
   example_matrix:
