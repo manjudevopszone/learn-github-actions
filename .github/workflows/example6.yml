@@ -5,8 +5,8 @@ jobs:
     runs-on: self-hosted
     strategy:
       matrix:
-        version: [10, 12, 14]
-        os: [ubuntu-latest, windows-latest]
+        version: [10, 12, 14]                     # values has 3 values
+        os: [ubuntu-latest, windows-latest]       # os has 2 values that is 3*2=6 combinations.
     steps:
       - name: Print matrix values
         run: |
