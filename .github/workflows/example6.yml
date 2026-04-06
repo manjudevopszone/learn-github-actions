@@ -13,8 +13,9 @@
 name: Example6
 on: [workflow_dispatch]
 jobs:
-  test1:
+  example_matrix:
     runs-on: self-hosted
-    steps:
-      - name: The demo step has failed
-        run: echo "demo step has failed"  >> $GITHUB_STEP_SUMMARY
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
