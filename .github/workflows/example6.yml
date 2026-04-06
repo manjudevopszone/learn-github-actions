@@ -1,12 +1,20 @@
 ##push trigger
+#name: Example6
+#on: [push]
+#jobs:
+#  example_matrix:
+#    runs-on: self-hosted
+#    strategy:
+#      matrix:
+#        version: [10, 12, 14]
+#        os: [ubuntu-latest, windows-latest]
+#    steps:
+#      - run: echo this job runs automatically
 name: Example6
 on: [push]
 jobs:
-  example_matrix:
+  test1:
     runs-on: self-hosted
-    strategy:
-      matrix:
-        version: [10, 12, 14]
-        os: [ubuntu-latest, windows-latest]
     steps:
-      - run: echo this job runs automatically
+      - name: The demo step has failed
+        run: echo "demo step has failed"  >> $GITHUB_STEP_SUMMARY
