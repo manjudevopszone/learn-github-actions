@@ -1,4 +1,4 @@
-name: Example6
+name: Example8
 on: [workflow_dispatch]
 jobs:
   stage1:
@@ -10,4 +10,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: ll
+
 
