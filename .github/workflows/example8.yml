@@ -1,0 +1,13 @@
+name: Example6
+on: [workflow_dispatch]
+jobs:
+  stage1:
+    runs-on: self-hosted       # os has 2 values that is 3*2=6 combinations.
+    steps:
+      - run: touch sample.txt
+      - run: ll
+  stage2:
+    runs-on: self-hosted
+    steps:
+      - run: ll
+
