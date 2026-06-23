@@ -1,5 +1,4 @@
-name: GitHub Actions CI-CD-MAIN
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: CI-CD-MAIN
 on:
   # Trigger automatically on pushes to specific branches
   push:
