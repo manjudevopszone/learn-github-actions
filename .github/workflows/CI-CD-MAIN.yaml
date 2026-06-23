@@ -7,8 +7,49 @@ on:
       - main
   # Trigger manually with custom configuration inputs
   workflow_dispatch:
+
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  Build:
+    runs-on: self-hosted
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event. adn successfully pushed"
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application.."
+
+  Test-Cases:
+    runs-on: self-hosted
+    needs: Build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application"
+
+  Dev-Deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application"
+
+  QA-Deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application"
+
+## at this stage we hwill be having End to End to test cases and performance test case based on the project
+
+  UAT-Deplpy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application"
+
+  Prod-Deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Application"
