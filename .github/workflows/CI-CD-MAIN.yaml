@@ -38,7 +38,7 @@ jobs:
       - name: Build
         run: echo "Building Application"
 
-## at this stage we hwill be having End to End to test cases and performance test case based on the project
+## at this stage we hwill be having End to End to test cases and performance test case based on the project or may be the UAT and prod runs on a different pipeline
 
   UAT-Deplpy:
     runs-on: self-hosted
