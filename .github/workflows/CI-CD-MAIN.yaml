@@ -26,6 +26,7 @@ jobs:
 
   Dev-Deploy:
     runs-on: self-hosted
+    needs: Test-Cases
     steps:
       - uses: actions/checkout@v4
       - name: Build
@@ -33,6 +34,7 @@ jobs:
 
   QA-Deploy:
     runs-on: self-hosted
+    needs: Dev-Deploy
     steps:
       - uses: actions/checkout@v4
       - name: Build
@@ -42,6 +44,7 @@ jobs:
 
   UAT-Deplpy:
     runs-on: self-hosted
+    needs: QA-Deploy
     steps:
       - uses: actions/checkout@v4
       - name: Build
@@ -49,6 +52,7 @@ jobs:
 
   Prod-Deploy:
     runs-on: self-hosted
+    needs: UAT-Deplpy
     steps:
       - uses: actions/checkout@v4
       - name: Build
