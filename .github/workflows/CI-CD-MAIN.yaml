@@ -1,0 +1,14 @@
+name: GitHub Actions CI-CD-MAIN
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  # Trigger automatically on pushes to specific branches
+  push:
+    branches:
+      - main
+  # Trigger manually with custom configuration inputs
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event. adn successfully pushed"
